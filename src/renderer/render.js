@@ -33,8 +33,8 @@ async function loadFamilyMembers() {
       listItem.innerHTML = `
         <p><strong>ФИО:</strong> ${member.full_name}</p>
         <p><strong>Дата рождения:</strong> ${member.birth_date}</p>
-        <p><strong>Должность:</strong> ${member.position  'Не указано'}</p>
-        <p><strong>Место работы:</strong> ${member.workplace  'Не указано'}</p>
+        <p><strong>Должность:</strong> ${member.position || 'Не указано'}</p>
+        <p><strong>Место работы:</strong> ${member.workplace || 'Не указано'}</p>
         <p><strong>Месячный доход:</strong> ${member.monthly_income}</p>
         <button onclick="deleteMember(${member.id})">Удалить</button>
       `;

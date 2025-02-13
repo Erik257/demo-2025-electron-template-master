@@ -20,6 +20,7 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^3.0.0",
+    "better-sqlite3": "^11.8.1",
     "pg": "^8.13.1",
     "react-router": "^7.1.5",
     "sqlite3": "^5.1.7"
