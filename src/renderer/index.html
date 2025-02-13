@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Учет семейного бюджета</title>
+  <style>
+    body {
+      font-family: 'Calibri', sans-serif;
+      background-color: #F4E8D3;
+      padding: 20px;
+    }
+    h1 {
+      color: #B11AED;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+      display: block;
+      width: 100%;
+    }
+    button {
+      background-color: #E8E84B;
+      border: none;
+      font-weight: bold;
+    }
+    .family-item {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Добавить члена семьи</h1>
+  <form id="family-form">
+    <input type="text" id="full_name" placeholder="ФИО" required>
+    <input type="date" id="birth_date" required>
+    <input type="text" id="position" placeholder="Текущая должность">
+    <input type="text" id="workplace" placeholder="Текущее место работы">
+    <input type="number" id="monthly_income" placeholder="Месячный доход" required>
+    <button type="submit">Добавить</button>
+  </form>
+
+  <h1>Список членов семьи</h1>
+  <div id="family-list"></div>
+
+  <h1>Анализ бюджета</h1>
+  <div id="budget-summary">
+    <p><strong>Общий доход:</strong> <span id="total-income">0</span> руб.</p>
+    <p><strong>Общие расходы:</strong> <span id="total-expenses">0</span> руб.</p>
+    <p><strong>Баланс:</strong> <span id="balance">0</span> руб.</p>
+    <p><strong>Статус:</strong> <span id="status">Не рассчитан</span></p>
+    <button id="refresh-summary">Обновить анализ бюджета</button>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
